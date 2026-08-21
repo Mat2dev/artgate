@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité — ArtGate</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 25px; }
+        p, li { color: #555; }
+        .highlight { background: #e8f4f8; border-left: 4px solid #2980b9; padding: 15px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Politique de Confidentialité — ArtGate</h1>
+        <p><em>Dernière mise à jour : 23 juillet 2026</em></p>
+
+        <div class="highlight">
+            <p><strong>Engagement d'ArtGate :</strong> ArtGate est une application éducative 100% locale et respectueuse de la vie privée. Aucune donnée personnelle, aucune donnée d'utilisation et aucun contenu d'écran ne sont collectés, stockés sur des serveurs distants ou partagés avec des tiers.</p>
+        </div>
+
+        <h2>1. Présentation de l'Application</h2>
+        <p>ArtGate est une application Android conçue pour encourager l'apprentissage et la découverte de la culture artistique à travers la présentation de micro-quiz lors du lancement d'applications sélectionnées par l'utilisateur.</p>
+
+        <h2>2. Utilisation de l'API d'Accessibilité (AccessibilityService)</h2>
+        <p>ArtGate utilise le service d'accessibilité Android (<code>ArtGateAccessibilityService</code>) exclusivement pour la fonctionnalité suivante :</p>
+        <ul>
+            <li>Détecter l'événement de changement de fenêtre active (<code>TYPE_WINDOW_STATE_CHANGED</code>) afin d'identifier si l'application ouverte fait partie de la liste des applications sélectionnées par l'utilisateur pour le suivi.</li>
+            <li>Afficher un overlay éducatif temporaire (<code>TYPE_ACCESSIBILITY_OVERLAY</code>) présentant une œuvre d'art et une question de quiz.</li>
+        </ul>
+        <p><strong>Garanties de sécurité et de confidentialité :</strong></p>
+        <ul>
+            <li>L'application est configurée avec <code>canRetrieveWindowContent = false</code> : ArtGate ne lit, n'analyse et n'accède à AUCUN contenu affiché à l'écran.</li>
+            <li>L'application est configurée avec <code>canPerformGestures = false</code> : ArtGate ne simule aucun geste automatique.</li>
+            <li>ArtGate ne suit pas, n'enregistre pas et n'intercepte aucune frappe de clavier, aucun mot de passe, aucun message ni aucune donnée saisie.</li>
+        </ul>
+
+        <h2>3. Collecte et Stockage des Données</h2>
+        <p>Toutes les données de l'application (préférences de sélection d'applications, paramètres de fréquence, historique des réponses et progression de l'apprentissage espacé) sont stockées <strong>exclusivement en local</strong> sur l'appareil de l'utilisateur via les bibliothèques Android Room et DataStore.</p>
+        <p>Aucun compte utilisateur n'est requis. Aucune donnée n'est transmise à travers Internet (l'application ne demande d'ailleurs aucune permission d'accès au réseau Internet).</p>
+
+        <h2>4. Partage de Données et Publicité</h2>
+        <p>ArtGate ne contient aucune publicité, aucun outil de suivi d'audience (analytics), aucun SDK publicitaire et aucun service tiers. Par conséquent, aucune donnée n'est partagée avec des entreprises tiers.</p>
+
+        <h2>5. Vos Droits et Suppression des Données</h2>
+        <p>L'utilisateur conserve un contrôle total sur l'application :</p>
+        <ul>
+            <li>L'accès au service d'accessibilité peut être désactivé à tout moment depuis les réglages système d'Android.</li>
+            <li>La désinstallation de l'application ou l'effacement des données de l'application depuis les paramètres Android entraîne la suppression immédiate et définitive de toutes les données locales stockées par ArtGate.</li>
+        </ul>
+
+        <h2>6. Contact</h2>
+        <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter par e-mail à : <code>matdeuh@gmail.com</code></p>
+    </div>
+</body>
+</html>
